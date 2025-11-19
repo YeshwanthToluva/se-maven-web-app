@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  web:
+    # Build the image using the Dockerfile in the current directory
+    build: .
+    # Use the name of the WAR file (without the .war extension) as the service name for clarity
+    container_name: se-web-app-1
+    # Map host port 8080 to container port 8080
+    ports:
+      - "8080:8080"
+    # Always restart the container if it stops
+    restart: always
